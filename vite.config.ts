@@ -12,15 +12,16 @@ export default defineConfig({
   base: "/yunwuvilla/",
   build: {
     outDir: "dist",
-    assetsDir: "assets",
+    assetsDir: "",
     sourcemap: false,
-    target: 'es2015',
+    target: 'es5',
+    minify: 'terser',
     rollupOptions: {
       output: {
         format: 'iife',
-        entryFileNames: 'assets/index.[hash].js',
-        chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]',
+        entryFileNames: 'index.js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
         manualChunks: undefined,
         inlineDynamicImports: true,
       }

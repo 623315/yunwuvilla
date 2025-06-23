@@ -3,8 +3,5 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
 
-/assets/*.js
-  Content-Type: application/javascript
-
 *.js
-  Content-Type: application/javascript 
+  Content-Type: text/javascript 
