@@ -28,6 +28,23 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -37,6 +54,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="./public/images/jaboticaba-logo.png" alt="雲霧嘉寶果莊園" class="h-10 w-10 mr-3">
                         <span class="text-xl md:text-2xl font-bold gradient-text">
                             雲霧嘉寶果莊園
                         </span>
@@ -81,230 +99,341 @@
         <section class="py-20 bg-gradient-to-br from-purple-50 to-green-50">
             <div class="max-w-6xl mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    我們的產品
+                    產品展示
                 </h1>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    每一款產品都承載著我們對品質的執著追求，
-                    從果園到您的餐桌，我們用心呵護每一個細節
+                    精選來自雲霧莊園的天然美味，每一件產品都承載著我們對品質的執著追求
                 </p>
             </div>
         </section>
 
-        <!-- Main Product - Wine -->
+        <!-- Featured Wine Section -->
         <section class="py-20 bg-white">
             <div class="max-w-6xl mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="relative">
                         <div class="bg-gradient-to-br from-purple-100 to-green-100 rounded-2xl p-8">
                             <img
                                 src="./public/images/jaboticaba-wine.jpeg"
-                                alt="雲霧·醇釀嘉寶果酒"
-                                class="w-full h-96 object-cover rounded-xl shadow-lg"
+                                alt="雲霧醇釀嘉寶果酒"
+                                class="w-full h-96 object-cover rounded-xl shadow-lg hover-scale"
                             />
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-purple-600 text-white rounded-xl p-4 shadow-lg">
+                            <i data-lucide="star" class="h-6 w-6 mb-2"></i>
+                            <p class="text-sm font-semibold">明星產品</p>
                         </div>
                     </div>
 
                     <div class="space-y-6">
-                        <div class="flex items-center mb-4">
-                            <i data-lucide="star" class="h-6 w-6 text-yellow-500 mr-2"></i>
-                            <span class="text-yellow-600 font-semibold">旗艦產品</span>
-                        </div>
-                        
-                        <h2 class="text-3xl md:text-4xl font-bold text-purple-900">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
                             雲霧·醇釀嘉寶果酒
                         </h2>
                         
                         <p class="text-lg text-gray-600 leading-relaxed">
-                            採用莊園內自然農法種植的完全成熟嘉寶果，經過精心挑選，
-                            運用傳統發酵工藝與現代釀造技術相結合，呈現出獨特的風味層次。
+                            我們的招牌產品，選用完全成熟的嘉寶果，經過天然發酵工藝精心釀造。
+                            酒體呈現深邃的紫紅色，散發著濃郁的果香，入口順滑，餘味悠長。
                         </p>
 
                         <div class="bg-gradient-to-r from-purple-50 to-green-50 rounded-xl p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">風味特色</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="text-center">
-                                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                                        <i data-lucide="grape" class="h-6 w-6 text-purple-600"></i>
-                                    </div>
-                                    <p class="text-sm font-semibold text-gray-900">香氣</p>
-                                    <p class="text-xs text-gray-600">熱帶水果複合香氣</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">產品特色</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i data-lucide="grape" class="h-5 w-5 text-purple-600 mr-3"></i>
+                                    <span class="text-gray-700">100%嘉寶果釀造，無添加人工色素</span>
                                 </div>
-                                <div class="text-center">
-                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                                        <i data-lucide="heart" class="h-6 w-6 text-green-600"></i>
-                                    </div>
-                                    <p class="text-sm font-semibold text-gray-900">口感</p>
-                                    <p class="text-xs text-gray-600">甜美順滑，餘味悠長</p>
+                                <div class="flex items-center">
+                                    <i data-lucide="leaf" class="h-5 w-5 text-green-600 mr-3"></i>
+                                    <span class="text-gray-700">天然發酵，保留豐富花青素</span>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wine Details -->
-                <div class="bg-gradient-to-br from-purple-50 to-green-50 rounded-2xl p-8 md:p-12">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">釀造工藝</h3>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="space-y-6">
-                            <h4 class="text-xl font-bold text-purple-900">自然發酵系列</h4>
-                            
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <i data-lucide="grape" class="h-5 w-5 text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
-                                    <div>
-                                        <h5 class="font-semibold text-gray-900">原料選擇</h5>
-                                        <p class="text-sm text-gray-600">手工採摘完全成熟的嘉寶果，確保每顆果實品質</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <i data-lucide="clock" class="h-5 w-5 text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
-                                    <div>
-                                        <h5 class="font-semibold text-gray-900">天然發酵</h5>
-                                        <p class="text-sm text-gray-600">依賴果皮天然酵母菌群，發酵過程緩慢而充分</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <i data-lucide="award" class="h-5 w-5 text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
-                                    <div>
-                                        <h5 class="font-semibold text-gray-900">風土表達</h5>
-                                        <p class="text-sm text-gray-600">最能體現從化雲霧山區的獨特風土特色</p>
-                                    </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="award" class="h-5 w-5 text-purple-600 mr-3"></i>
+                                    <span class="text-gray-700">限量生產，每瓶都有獨特編號</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="space-y-6">
-                            <h4 class="text-xl font-bold text-green-900">控溫發酵系列</h4>
-                            
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <i data-lucide="thermometer" class="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
-                                    <div>
-                                        <h5 class="font-semibold text-gray-900">精選酵母</h5>
-                                        <p class="text-sm text-gray-600">使用適合水果酒的商業酵母，品質穩定</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <i data-lucide="clock" class="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
-                                    <div>
-                                        <h5 class="font-semibold text-gray-900">恆溫發酵</h5>
-                                        <p class="text-sm text-gray-600">恆溫環境下發酵，確保風味純淨一致</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <i data-lucide="heart" class="h-5 w-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
-                                    <div>
-                                        <h5 class="font-semibold text-gray-900">果香怡人</h5>
-                                        <p class="text-sm text-gray-600">突出嘉寶果天然果香，口感清新順滑</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-2xl font-bold text-purple-600">$388</span>
+                            <span class="text-gray-500 line-through">$488</span>
+                            <span class="bg-red-500 text-white px-2 py-1 rounded text-sm">限時特價</span>
                         </div>
+
+                        <button class="w-full bg-gradient-to-r from-purple-600 to-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-green-700 transition-all duration-300">
+                            立即購買
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Other Products -->
+        <!-- Products Grid -->
         <section class="py-20 bg-gradient-to-br from-green-50 to-purple-50">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                        其他精選產品
+                        全系列產品
                     </h2>
                     <p class="text-xl text-gray-600">
-                        從鮮果到果醬，每一款都是自然的饋贈
+                        從新鮮果實到精釀美酒，滿足您的多元需求
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Fresh Fruit -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                        <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 醇釀嘉寶果酒 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card">
+                        <div class="h-64 bg-gradient-to-br from-purple-100 to-green-100 p-4">
                             <img
-                                src="./public/images/jaboticaba-fruit.jpg"
-                                alt="新鮮嘉寶果"
-                                class="w-full h-48 object-cover rounded-xl mb-6"
+                                src="./public/images/jaboticaba-wine2.jpg"
+                                alt="醇釀嘉寶果酒"
+                                class="w-full h-full object-cover rounded-xl"
                             />
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                                新鮮嘉寶果
-                            </h3>
-                            <p class="text-gray-600 mb-6">
-                                樹上成熟，當日採摘，讓您品嚐到最新鮮、風味最佳的嘉寶果。
-                                每一顆都飽含豐富的花青素和維生素，是大自然珍貴的營養寶庫。
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">醇釀嘉寶果酒</h3>
+                            <p class="text-gray-600 mb-4">
+                                精選優質嘉寶果，經天然發酵釀造，口感豐富層次分明
                             </p>
-                            
-                            <div class="space-y-3">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-lg font-bold text-purple-600">$388</span>
                                 <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                                    <span class="text-sm text-gray-600">樹上成熟，當日採摘</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                                    <span class="text-sm text-gray-600">富含花青素和維生素C</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                                    <span class="text-sm text-gray-600">冷鏈配送，保持新鮮</span>
+                                    <div class="flex text-yellow-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-500 ml-1">(4.9)</span>
                                 </div>
                             </div>
+                            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                加入購物車
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Jam -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                        <div class="p-6">
+                    <!-- 新鮮嘉寶果 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card">
+                        <div class="h-64 bg-gradient-to-br from-purple-100 to-green-100 p-4">
                             <img
-                                src="./public/images/wine-glass.jpg"
-                                alt="嘉寶果果醬"
-                                class="w-full h-48 object-cover rounded-xl mb-6"
+                                src="./public/images/jaboticaba-tree.jpg"
+                                alt="新鮮嘉寶果"
+                                class="w-full h-full object-cover rounded-xl"
                             />
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                                手工嘉寶果醬
-                            </h3>
-                            <p class="text-gray-600 mb-6">
-                                採用傳統工藝手工熬製，不添加過多糖分和人工添加劑，
-                                完整保留嘉寶果的天然風味和豐富營養，是早餐和下午茶的完美伴侶。
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">新鮮嘉寶果</h3>
+                            <p class="text-gray-600 mb-4">
+                                當天採摘新鮮直送，富含花青素和維生素，營養價值極高
                             </p>
-                            
-                            <div class="space-y-3">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-lg font-bold text-green-600">$88/盒</span>
                                 <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                                    <span class="text-sm text-gray-600">傳統工藝，手工熬製</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                                    <span class="text-sm text-gray-600">低糖配方，健康美味</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                                    <span class="text-sm text-gray-600">密封包裝，易於保存</span>
+                                    <div class="flex text-yellow-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-500 ml-1">(4.8)</span>
                                 </div>
                             </div>
+                            <button class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                加入購物車
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 精裝禮盒套裝 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card">
+                        <div class="h-64 bg-gradient-to-br from-purple-100 to-green-100 p-4">
+                            <img
+                                src="./public/images/wine-friends-toast.jpg"
+                                alt="精裝禮盒套裝"
+                                class="w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">精裝禮盒套裝</h3>
+                            <p class="text-gray-600 mb-4">
+                                包含嘉寶果酒、新鮮果實和手工果醬的精美禮盒裝
+                            </p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-lg font-bold text-purple-600">$588</span>
+                                <div class="flex items-center">
+                                    <div class="flex text-yellow-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-500 ml-1">(5.0)</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                加入購物車
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 手工果醬 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card">
+                        <div class="h-64 bg-gradient-to-br from-purple-100 to-green-100 p-4">
+                            <img
+                                src="./public/images/jaboticaba2.jpg"
+                                alt="手工嘉寶果醬"
+                                class="w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">手工嘉寶果醬</h3>
+                            <p class="text-gray-600 mb-4">
+                                純手工熬煮製作，無添加防腐劑，保留果實天然風味
+                            </p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-lg font-bold text-green-600">$58/瓶</span>
+                                <div class="flex items-center">
+                                    <div class="flex text-yellow-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-500 ml-1">(4.7)</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                加入購物車
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 嘉寶果乾 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card">
+                        <div class="h-64 bg-gradient-to-br from-purple-100 to-green-100 p-4">
+                            <img
+                                src="./public/images/jaboticaba.jpg"
+                                alt="嘉寶果乾"
+                                class="w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">嘉寶果乾</h3>
+                            <p class="text-gray-600 mb-4">
+                                低溫烘乾工藝，保留營養成分，方便攜帶的健康零食
+                            </p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-lg font-bold text-purple-600">$78/包</span>
+                                <div class="flex items-center">
+                                    <div class="flex text-yellow-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-500 ml-1">(4.6)</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                加入購物車
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 體驗套裝 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card">
+                        <div class="h-64 bg-gradient-to-br from-purple-100 to-green-100 p-4">
+                            <img
+                                src="./public/images/vineyard.jpg"
+                                alt="莊園體驗套裝"
+                                class="w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">莊園體驗套裝</h3>
+                            <p class="text-gray-600 mb-4">
+                                包含莊園參觀、品酒體驗、採摘活動的完整體驗套裝
+                            </p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-lg font-bold text-green-600">$288/人</span>
+                                <div class="flex items-center">
+                                    <div class="flex text-yellow-400">
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-500 ml-1">(4.9)</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                立即預約
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Purchase Information -->
         <section class="py-20 bg-white">
-            <div class="max-w-6xl mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    訂購諮詢
-                </h2>
-                <p class="text-xl text-gray-600 mb-8">
-                    想要品嚐我們的嘉寶果產品嗎？歡迎聯繫我們
-                </p>
-                <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full text-lg font-medium smooth-transition">
-                    立即諮詢
-                    <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
-                </a>
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        購買說明
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        為您提供最便捷的購買體驗
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="shopping-cart" class="h-8 w-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">線上訂購</h3>
+                        <p class="text-gray-600">
+                            通過微信或電話聯繫我們，輕鬆完成訂購
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="truck" class="h-8 w-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">快速配送</h3>
+                        <p class="text-gray-600">
+                            廣州市區24小時內送達，其他地區2-3天到貨
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="shield-check" class="h-8 w-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">品質保證</h3>
+                        <p class="text-gray-600">
+                            7天無理由退換，確保您的購買滿意度
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="headphones" class="h-8 w-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">專業服務</h3>
+                        <p class="text-gray-600">
+                            專業客服團隊，隨時為您解答疑問
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -314,7 +443,10 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 gradient-text">雲霧嘉寶果莊園</h3>
+                    <div class="flex items-center mb-4">
+                        <img src="./public/images/jaboticaba-logo.png" alt="雲霧嘉寶果莊園" class="h-8 w-8 mr-3">
+                        <h3 class="text-xl font-bold gradient-text">雲霧嘉寶果莊園</h3>
+                    </div>
                     <p class="text-gray-400">
                         專注自然農法種植，匠心釀造美酒，與您分享大自然最純粹的饋贈。
                     </p>
