@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .test-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-box">
+        <h1>🎉 测试页面加载成功！</h1>
+        <p>如果你能看到这个页面，说明Cloudflare Pages基本配置是正确的。</p>
+        <p>问题可能出现在React应用的构建或加载过程中。</p>
+        <hr>
+        <h2>测试图片加载：</h2>
+        <img src="/images/host-woman.jpg" alt="测试图片" style="max-width: 200px; border-radius: 8px;">
+    </div>
+    
+    <script>
+        console.log('✅ JavaScript 正常工作');
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ DOM 加载完成');
+        });
+    </script>
+</body>
+</html> 
