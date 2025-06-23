@@ -406,8 +406,8 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                         莊園位置
                     </h2>
-                    <p class="text-xl text-gray-600">
-                        廣州市從化區雲霧山莊，交通便利，環境優美
+                                         <p class="text-xl text-gray-600">
+                        廣州市從化區溫泉大道新園街99號，交通便利，環境優美
                     </p>
                 </div>
 
@@ -422,7 +422,7 @@
                                         <i data-lucide="car" class="h-6 w-6 text-purple-600 mr-3 mt-1"></i>
                                         <div>
                                             <h4 class="font-semibold text-gray-900 mb-1">自駕路線</h4>
-                                            <p class="text-gray-600">廣州市區 → 105國道 → 從化區 → 雲霧山莊</p>
+                                                                                         <p class="text-gray-600">廣州市區 → 105國道 → 從化區 → 溫泉大道新園街99號</p>
                                             <p class="text-sm text-gray-500">約1小時車程</p>
                                         </div>
                                     </div>
@@ -451,20 +451,26 @@
                                         <i data-lucide="map-pin" class="h-5 w-5 text-purple-600 mr-2"></i>
                                         詳細地址
                                     </h4>
-                                    <p class="text-gray-700">廣東省廣州市從化區雲霧山莊</p>
+                                    <p class="text-gray-700">廣東省廣州市從化區溫泉大道新園街99號</p>
                                     <p class="text-sm text-gray-600 mt-1">GPS導航：雲霧嘉寶果莊園</p>
                                 </div>
                             </div>
 
                             <div class="relative">
-                                <div class="bg-white rounded-xl border-2 border-dashed border-purple-300 h-96 flex items-center justify-center cursor-pointer group hover:bg-purple-50 transition-colors" id="map-container">
-                                    <div class="text-center">
-                                        <i data-lucide="map" class="h-16 w-16 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
-                                        <h4 class="text-xl font-bold text-gray-900 mb-2">點擊查看地圖</h4>
-                                        <p class="text-gray-600 mb-1">廣州市從化區雲霧山莊</p>
-                                        <p class="text-sm text-purple-600 group-hover:text-purple-800 transition-colors">
-                                            點擊放大查看詳細位置
-                                        </p>
+                                <div class="bg-white rounded-xl border border-gray-200 h-96 overflow-hidden shadow-lg">
+                                    <iframe 
+                                        width="100%" 
+                                        height="100%" 
+                                        frameborder="0" 
+                                        scrolling="no" 
+                                        marginheight="0" 
+                                        marginwidth="0" 
+                                        src="https://uri.amap.com/marker?position=113.59,23.63&name=雲霧嘉寶果莊園&src=雲霧嘉寶果莊園&coordinate=gaode&callnative=0"
+                                        style="border-radius: 12px;">
+                                    </iframe>
+                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                                        <p class="text-white text-sm font-medium">廣東省廣州市從化區溫泉大道新園街99號</p>
+                                        <p class="text-white/80 text-xs">雲霧嘉寶果莊園</p>
                                     </div>
                                 </div>
                             </div>
@@ -474,61 +480,7 @@
             </div>
         </section>
 
-        <!-- Map Modal -->
-        <div id="map-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
-                <div class="flex items-center justify-between p-6 border-b">
-                    <h3 class="text-xl font-bold text-gray-900">雲霧嘉寶果莊園位置</h3>
-                    <button id="close-modal" class="text-gray-500 hover:text-gray-700 transition-colors">
-                        <i data-lucide="x" class="h-6 w-6"></i>
-                    </button>
-                </div>
-                <div class="p-6">
-                    <div class="bg-gradient-to-br from-purple-50 to-green-50 rounded-lg h-80 mb-6 flex items-center justify-center">
-                        <div class="text-center">
-                            <i data-lucide="map-pin" class="h-16 w-16 text-purple-600 mx-auto mb-4"></i>
-                            <p class="text-2xl font-bold text-gray-900 mb-2">廣州市從化區雲霧山莊</p>
-                            <p class="text-lg text-gray-700 mb-4">雲霧嘉寶果莊園</p>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600 max-w-md mx-auto">
-                                <div class="bg-white rounded-lg p-3">
-                                    <p class="font-semibold">GPS座標</p>
-                                    <p>23.5461°N</p>
-                                    <p>113.5987°E</p>
-                                </div>
-                                <div class="bg-white rounded-lg p-3">
-                                    <p class="font-semibold">海拔高度</p>
-                                    <p>200-300米</p>
-                                </div>
-                                <div class="bg-white rounded-lg p-3">
-                                    <p class="font-semibold">莊園面積</p>
-                                    <p>200畝</p>
-                                    <p>(約13.3公頃)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-gray-600 mb-4">
-                            如需精確導航，請在地圖應用中搜尋"雲霧山莊"或"從化區雲霧山莊"
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                            <a href="https://maps.baidu.com/search/雲霧山莊/@12946721.86,2633074.82,15z" 
-                               target="_blank" 
-                               class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
-                                <i data-lucide="external-link" class="h-5 w-5 mr-2"></i>
-                                百度地圖
-                            </a>
-                            <a href="https://www.amap.com/search?query=雲霧山莊&city=440117" 
-                               target="_blank" 
-                               class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors">
-                                <i data-lucide="external-link" class="h-5 w-5 mr-2"></i>
-                                高德地圖
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <!-- Footer -->
@@ -619,32 +571,7 @@
             }
 
             // 地图模态框功能
-            const mapContainer = document.getElementById('map-container');
-            const mapModal = document.getElementById('map-modal');
-            const closeModal = document.getElementById('close-modal');
 
-            if (mapContainer && mapModal && closeModal) {
-                mapContainer.addEventListener('click', () => {
-                    mapModal.classList.remove('hidden');
-                });
-
-                closeModal.addEventListener('click', () => {
-                    mapModal.classList.add('hidden');
-                });
-
-                mapModal.addEventListener('click', (e) => {
-                    if (e.target === mapModal) {
-                        mapModal.classList.add('hidden');
-                    }
-                });
-
-                // ESC键关闭模态框
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && !mapModal.classList.contains('hidden')) {
-                        mapModal.classList.add('hidden');
-                    }
-                });
-            }
         });
     </script>
 </body>
