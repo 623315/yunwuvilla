@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="雲霧嘉寶果莊園介紹 - 200畝自然農法莊園，廣州從化雲霧山區">
+    <meta name="keywords" content="莊園介紹,自然農法,從化,雲霧山,生態農業">
+    <meta name="author" content="雲霧嘉寶果莊園">
+    <title>雲霧嘉寶果莊園 - 莊園介紹</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #9333ea, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .smooth-transition {
+            transition: all 0.3s ease;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-xl md:text-2xl font-bold gradient-text">
+                            雲霧嘉寶果莊園
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">首頁</a>
+                    <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-purple-600 bg-purple-50">莊園介紹</a>
+                    <a href="products.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">產品展示</a>
+                    <a href="knowledge.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">嘉寶果知識</a>
+                    <a href="owner-story.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊主故事</a>
+                    <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">聯繫我們</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-purple-50">
+                        <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+                        <i data-lucide="x" class="h-6 w-6 hidden" id="close-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-nav" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">首頁</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-purple-600 bg-purple-50">莊園介紹</a>
+                <a href="products.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">產品展示</a>
+                <a href="knowledge.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">嘉寶果知識</a>
+                <a href="owner-story.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊主故事</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">聯繫我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="min-h-screen pt-16">
+        <!-- Hero Section -->
+        <section class="py-20 bg-gradient-to-br from-purple-50 to-green-50">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    關於雲霧嘉寶果莊園
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    在廣州從化的雲霧山間，我們用自然農法的智慧，
+                    培育著這片珍貴的嘉寶果園，與自然和諧共生
+                </p>
+            </div>
+        </section>
+
+        <!-- Location & Scale -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                            地理位置與規模
+                        </h2>
+                        
+                        <div class="flex items-start">
+                            <i data-lucide="map-pin" class="h-6 w-6 text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">廣州從化</h3>
+                                <p class="text-gray-600">
+                                    坐落於廣州從化雲霧繚繞的山區，這裡氣候溫和濕潤，
+                                    四季如春，是嘉寶果生長的理想環境。從化素有"廣州後花園"之稱，
+                                    山清水秀，空氣清新，為我們的果園提供了得天獨厚的自然條件。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-purple-50 to-green-50 rounded-xl p-6">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-purple-900">200畝</div>
+                                    <p class="text-gray-600">莊園總面積</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-green-900">100+畝</div>
+                                    <p class="text-gray-600">嘉寶果種植面積</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-purple-100 to-green-100 rounded-2xl p-8">
+                            <img
+                                src="./public/images/organic-farm.jpg"
+                                alt="莊園景色"
+                                class="w-full h-80 object-cover rounded-xl shadow-lg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Natural Farming Philosophy -->
+        <section class="py-20 bg-gradient-to-br from-green-50 to-purple-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        自然農法理念
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        遵循"無為而治"的智慧，與自然和諧共生
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="leaf" class="h-8 w-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">無農藥</h3>
+                        <p class="text-gray-600">
+                            不使用任何化學農藥，依靠天然的生態平衡來防治病蟲害，
+                            讓每一顆果實都保持最純淨的品質
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="tree-pine" class="h-8 w-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">無化肥</h3>
+                        <p class="text-gray-600">
+                            拒絕化學肥料，通過有機堆肥和綠肥作物來培養土壤，
+                            讓果樹在最自然的環境中茁壯成長
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="heart" class="h-8 w-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">無除草劑</h3>
+                        <p class="text-gray-600">
+                            採用人工除草和生物覆蓋的方式管理雜草，
+                            維護土壤生態系統的完整性和生物多樣性
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 md:p-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">
+                        土壤是生命之本
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-6">
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                我們深信，健康的土壤是產出優質果實的基礎。
+                                通過覆蓋豆科、禾本科等綠肥作物，我們模擬原始森林的地表環境，
+                                不僅能防止水土流失、抑制雜草，更重要的是通過植物的自然固氮和腐解過程，
+                                持續不斷地培肥地力。
+                            </p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></div>
+                                    <p class="text-gray-600">豐富的有機質含量，提供充足的營養</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></div>
+                                    <p class="text-gray-600">良好的土壤結構，促進根系發育</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></div>
+                                    <p class="text-gray-600">豐富的微生物群落，增強植物抗病能力</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-100 to-purple-100 rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">生態循環</h4>
+                            <div class="space-y-3 text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs mr-3">1</span>
+                                    綠肥作物覆蓋土壤
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs mr-3">2</span>
+                                    植物殘體自然腐解
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs mr-3">3</span>
+                                    土壤有機質增加
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs mr-3">4</span>
+                                    嘉寶果品質提升
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecological Harmony -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        生態和諧
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        創造生物多樣性的果園環境
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900">
+                            完整的生態系統
+                        </h3>
+                        
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            在我們的果園裡，您可以看到各種鳥類在樹枝間飛舞，
+                            益蟲在花叢中穿梭，蚯蚓在土壤中辛勤工作。
+                            這不僅僅是一個果園，更是一個完整的生態系統。
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <i data-lucide="users" class="h-6 w-6 text-green-600 mb-2"></i>
+                                <h4 class="font-semibold text-green-900 mb-1">益蟲繁衍</h4>
+                                <p class="text-sm text-green-700">天敵昆蟲自然控制害蟲</p>
+                            </div>
+                            
+                            <div class="bg-purple-50 rounded-lg p-4">
+                                <i data-lucide="heart" class="h-6 w-6 text-purple-600 mb-2"></i>
+                                <h4 class="font-semibold text-purple-900 mb-1">鳥類棲息</h4>
+                                <p class="text-sm text-purple-700">各種鳥類在此安家落戶</p>
+                            </div>
+                            
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <i data-lucide="leaf" class="h-6 w-6 text-green-600 mb-2"></i>
+                                <h4 class="font-semibold text-green-900 mb-1">植物多樣</h4>
+                                <p class="text-sm text-green-700">多種植物和諧共生</p>
+                            </div>
+                            
+                            <div class="bg-purple-50 rounded-lg p-4">
+                                <i data-lucide="award" class="h-6 w-6 text-purple-600 mb-2"></i>
+                                <h4 class="font-semibold text-purple-900 mb-1">生態平衡</h4>
+                                <p class="text-sm text-purple-700">自然調節維持平衡</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-green-100 to-purple-100 rounded-2xl p-8">
+                            <img
+                                src="./public/images/vineyard-landscape.jpg"
+                                alt="生態環境"
+                                class="w-full h-80 object-cover rounded-xl shadow-lg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Commitment -->
+        <section class="py-20 bg-gradient-to-br from-purple-50 to-green-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        品質承諾
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        每一顆果實都是我們對品質的承諾
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="clock" class="h-6 w-6 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">時間沉澱</h3>
+                        <p class="text-sm text-gray-600">耐心等待果實自然成熟</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="leaf" class="h-6 w-6 text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">自然純淨</h3>
+                        <p class="text-sm text-gray-600">無農藥無化肥種植</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="heart" class="h-6 w-6 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">用心呵護</h3>
+                        <p class="text-sm text-gray-600">每棵樹都精心照料</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award" class="h-6 w-6 text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">品質保證</h3>
+                        <p class="text-sm text-gray-600">嚴選每一顆果實</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">雲霧嘉寶果莊園</h3>
+                    <p class="text-gray-400">
+                        專注自然農法種植，匠心釀造美酒，與您分享大自然最純粹的饋贈。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">快速鏈接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white smooth-transition">首頁</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white smooth-transition">莊園介紹</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white smooth-transition">產品展示</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white smooth-transition">聯繫我們</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">關注我們</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="facebook" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="instagram" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="phone" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 雲霧嘉寶果莊園. 版權所有.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (mobileMenuBtn && mobileNav && menuIcon && closeIcon) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

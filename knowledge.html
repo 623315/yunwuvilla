@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="嘉寶果知識百科 - 營養價值、健康功效、種植特性全面解析">
+    <meta name="keywords" content="嘉寶果,樹葡萄,營養價值,花青素,抗氧化,健康功效">
+    <meta name="author" content="雲霧嘉寶果莊園">
+    <title>雲霧嘉寶果莊園 - 嘉寶果知識</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #9333ea, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .smooth-transition {
+            transition: all 0.3s ease;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-xl md:text-2xl font-bold gradient-text">
+                            雲霧嘉寶果莊園
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">首頁</a>
+                    <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊園介紹</a>
+                    <a href="products.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">產品展示</a>
+                    <a href="knowledge.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-purple-600 bg-purple-50">嘉寶果知識</a>
+                    <a href="owner-story.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊主故事</a>
+                    <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">聯繫我們</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-purple-50">
+                        <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+                        <i data-lucide="x" class="h-6 w-6 hidden" id="close-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-nav" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">首頁</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊園介紹</a>
+                <a href="products.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">產品展示</a>
+                <a href="knowledge.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-purple-600 bg-purple-50">嘉寶果知識</a>
+                <a href="owner-story.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊主故事</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">聯繫我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="min-h-screen pt-16">
+        <!-- Hero Section -->
+        <section class="py-20 bg-gradient-to-br from-purple-50 to-green-50">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    嘉寶果知識百科
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    探索神奇的"樹葡萄"，了解這種珍貴水果的營養價值、
+                    健康功效以及它獨特的生長特性
+                </p>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                            神奇的"樹葡萄"
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-purple-50 rounded-lg p-4">
+                                <h3 class="font-bold text-purple-900 mb-2">學名</h3>
+                                <p class="text-purple-700"><em>Plinia cauliflora</em>（桃金娘科）</p>
+                            </div>
+                            
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <h3 class="font-bold text-green-900 mb-2">別名</h3>
+                                <p class="text-green-700">樹葡萄、木葡萄、珍寶果</p>
+                            </div>
+                            
+                            <div class="bg-purple-50 rounded-lg p-4">
+                                <h3 class="font-bold text-purple-900 mb-2">原產地</h3>
+                                <p class="text-purple-700">南美洲巴西米納斯吉拉斯州</p>
+                            </div>
+                        </div>
+
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            嘉寶果最神奇的特征是它的"干生果"現象 - 
+                            花朵和果實直接從樹干和主枝上長出，成熟時呈現深紫色，
+                            如同一顆顆黑寶石掛滿枝干，這種奇特的景象在植物界極為罕見。
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-purple-100 to-green-100 rounded-2xl p-8">
+                            <img
+                                src="./public/images/jaboticaba-fruit.jpg"
+                                alt="嘉寶果樹"
+                                class="w-full h-80 object-cover rounded-xl shadow-lg"
+                            />
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-purple-600 text-white rounded-xl p-4 shadow-lg">
+                            <i data-lucide="star" class="h-6 w-6 mb-2"></i>
+                            <p class="text-sm font-semibold">珍稀水果</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nutritional Value -->
+        <section class="py-20 bg-gradient-to-br from-purple-50 to-green-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        營養價值寶庫
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        被譽為"蔓藤上的黑寶石"，富含珍貴營養成分
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="grape" class="h-8 w-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">花青素</h3>
+                        <p class="text-gray-600 text-sm">
+                            含量極高的天然抗氧化劑，
+                            主要存在於果皮中，
+                            賦予果實深紫色
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="shield" class="h-8 w-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">酚類化合物</h3>
+                        <p class="text-gray-600 text-sm">
+                            包括類黃酮、單寧、酚酸等，
+                            具有強大的抗炎、
+                            抗氧化生理活性
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="heart" class="h-8 w-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">維生素群</h3>
+                        <p class="text-gray-600 text-sm">
+                            富含維生素C、維生素B群，
+                            提供豐富的營養支持，
+                            增強免疫力
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="star" class="h-8 w-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">礦物質</h3>
+                        <p class="text-gray-600 text-sm">
+                            豐富的鈣、鎂、鐵、鉀等
+                            礦物質，維持身體
+                            正常生理功能
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Detailed Nutrition Facts -->
+                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">
+                        營養成分詳解
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <h4 class="text-xl font-bold text-purple-900">核心營養成分</h4>
+                            
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center p-4 bg-purple-50 rounded-lg">
+                                    <span class="font-semibold text-gray-900">花青素</span>
+                                    <span class="text-purple-600 font-bold">極高含量</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                                    <span class="font-semibold text-gray-900">維生素C</span>
+                                    <span class="text-green-600 font-bold">豐富</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-center p-4 bg-purple-50 rounded-lg">
+                                    <span class="font-semibold text-gray-900">膳食纖維</span>
+                                    <span class="text-purple-600 font-bold">高含量</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                                    <span class="font-semibold text-gray-900">多酚類</span>
+                                    <span class="text-green-600 font-bold">豐富</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <h4 class="text-xl font-bold text-green-900">營養密度對比</h4>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700">抗氧化能力</span>
+                                        <span class="text-purple-600 font-semibold">比藍莓高2-3倍</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700">維生素C</span>
+                                        <span class="text-green-600 font-semibold">比柑橘高30%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="text-gray-700">花青素</span>
+                                        <span class="text-purple-600 font-semibold">比葡萄高5倍</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-purple-600 h-2 rounded-full" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Benefits -->
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        健康功效
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        科學研究證實的多重健康益處
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="heart" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">心血管保護</h3>
+                        <p class="text-gray-700 mb-4">
+                            豐富的花青素和多酚類化合物有助於改善血液循環，
+                            降低心血管疾病風險
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 改善血管彈性</li>
+                            <li>• 降低血壓</li>
+                            <li>• 減少動脈硬化</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="shield" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">增強免疫力</h3>
+                        <p class="text-gray-700 mb-4">
+                            高含量的維生素C和抗氧化物質能夠增強免疫系統功能，
+                            提高機體抗病能力
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 提升白血球活性</li>
+                            <li>• 抗感染能力</li>
+                            <li>• 促進傷口癒合</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="eye" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">護眼明目</h3>
+                        <p class="text-gray-700 mb-4">
+                            花青素對保護視力有顯著效果，
+                            能夠緩解眼部疲勞，改善夜視能力
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 保護視網膜</li>
+                            <li>• 改善微循環</li>
+                            <li>• 預防眼部老化</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="brain" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">抗衰老</h3>
+                        <p class="text-gray-700 mb-4">
+                            強大的抗氧化能力能夠清除自由基，
+                            延緩細胞老化，保持年輕活力
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 清除自由基</li>
+                            <li>• 延緩衰老</li>
+                            <li>• 美容養顏</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="heart" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">抗炎作用</h3>
+                        <p class="text-gray-700 mb-4">
+                            多種生物活性成分具有天然的抗炎效果，
+                            有助於緩解慢性炎症
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 減少炎症反應</li>
+                            <li>• 緩解關節疼痛</li>
+                            <li>• 改善腸道健康</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="star" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">調節血糖</h3>
+                        <p class="text-gray-700 mb-4">
+                            膳食纖維和多酚類化合物有助於穩定血糖水平，
+                            適合糖尿病患者適量食用
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• 延緩糖分吸收</li>
+                            <li>• 穩定血糖</li>
+                            <li>• 改善胰島素敏感性</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Growing Characteristics -->
+        <section class="py-20 bg-gradient-to-br from-green-50 to-purple-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        生長特性
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        了解嘉寶果的獨特生長習性
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">生長環境</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i data-lucide="thermometer" class="h-5 w-5 text-green-600 mr-3"></i>
+                                    <span class="text-gray-700">溫度：15-30°C</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="cloud-rain" class="h-5 w-5 text-blue-600 mr-3"></i>
+                                    <span class="text-gray-700">濕度：60-80%</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="sun" class="h-5 w-5 text-yellow-600 mr-3"></i>
+                                    <span class="text-gray-700">光照：半陰或散射光</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">生長週期</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs mr-3">1</span>
+                                    <span class="text-gray-700">幼苗期：1-3年</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs mr-3">2</span>
+                                    <span class="text-gray-700">成長期：3-8年</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs mr-3">3</span>
+                                    <span class="text-gray-700">結果期：8年以上</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-green-100 to-purple-100 rounded-2xl p-8">
+                            <img
+                                src="./public/images/vineyard-landscape.jpg"
+                                alt="嘉寶果園"
+                                class="w-full h-80 object-cover rounded-xl shadow-lg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">雲霧嘉寶果莊園</h3>
+                    <p class="text-gray-400">
+                        專注自然農法種植，匠心釀造美酒，與您分享大自然最純粹的饋贈。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">快速鏈接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white smooth-transition">首頁</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white smooth-transition">莊園介紹</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white smooth-transition">產品展示</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white smooth-transition">聯繫我們</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">關注我們</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="facebook" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="instagram" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="phone" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 雲霧嘉寶果莊園. 版權所有.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (mobileMenuBtn && mobileNav && menuIcon && closeIcon) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
