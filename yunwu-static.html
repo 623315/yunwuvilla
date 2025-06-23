@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="雲霧嘉寶果莊園 - 專業嘉寶果種植與釀酒，體驗廣東當地農業文化與美酒">
+    <meta name="keywords" content="嘉寶果,莊園,釀酒,廣東農業,有機種植,觀光農場">
+    <meta name="author" content="雲霧嘉寶果莊園">
+    <title>雲霧嘉寶果莊園</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* 自定义样式 */
+        .gradient-text {
+            background: linear-gradient(to right, #9333ea, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-bg {
+            background-image: url('./public/images/organic-farm.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .smooth-transition {
+            transition: all 0.3s ease;
+        }
+        
+        /* 移动端导航动画 */
+        .mobile-nav {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-nav.open {
+            max-height: 500px;
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 响应式文字大小 */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 3rem;
+                line-height: 1.1;
+            }
+        }
+        
+        /* 图片回退样式 */
+        .img-fallback {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="flex-shrink-0 flex items-center">
+                        <span class="text-xl md:text-2xl font-bold gradient-text">
+                            雲霧嘉寶果莊園
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium smooth-transition text-purple-600 bg-purple-50">首頁</a>
+                    <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊園介紹</a>
+                    <a href="#products" class="nav-link px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">產品展示</a>
+                    <a href="#knowledge" class="nav-link px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">嘉寶果知識</a>
+                    <a href="#owner-story" class="nav-link px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊主故事</a>
+                    <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">聯繫我們</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-purple-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
+                        <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+                        <i data-lucide="x" class="h-6 w-6 hidden" id="close-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-nav" class="mobile-nav md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium smooth-transition text-purple-600 bg-purple-50">首頁</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊園介紹</a>
+                <a href="#products" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">產品展示</a>
+                <a href="#knowledge" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">嘉寶果知識</a>
+                <a href="#owner-story" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">莊主故事</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium smooth-transition text-gray-700 hover:text-purple-600 hover:bg-purple-50">聯繫我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden hero-bg">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/80 to-green-800/80 z-10"></div>
+        
+        <div class="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                雲霧嘉寶果莊園
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">
+                時間，在此放慢腳步，只為釀一瓶好酒
+            </p>
+            <p class="text-lg md:text-xl mb-12 text-purple-100">
+                在廣州從化的雲霧深處，用自然農法種植珍貴的嘉寶果，<br class="hidden sm:block">
+                與您分享大自然最純粹的饋贈
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#products" class="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-full text-lg font-medium smooth-transition">
+                    探索產品
+                    <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                </a>
+                <a href="#about" class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-purple-900 rounded-full text-lg font-medium smooth-transition">
+                    了解莊園
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Message -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="mb-12">
+                <div class="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg bg-gradient-to-br from-purple-100 to-green-100 flex items-center justify-center">
+                    <i data-lucide="user" class="h-16 w-16 text-purple-600"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    莊主的話
+                </h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-purple-50 to-green-50 rounded-2xl p-8 md:p-12">
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                        親愛的朋友，歡迎來到雲霧嘉寶果莊園。作為一位曾經在話筒前傳遞聲音的廣播主持人，
+                        如今我選擇在這片土地上培育生命，用同樣的真誠與熱情，與您分享自然的美好。
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                        在這200畝的莊園裡，100多畝的嘉寶果樹在自然農法的呵護下茁壯成長。
+                        我們不使用農藥、不施化肥，只用時間和耐心，讓每一顆果實都擁有最純粹的味道。
+                    </p>
+                    <div class="flex items-center justify-center text-purple-600 font-semibold">
+                        <i data-lucide="heart" class="h-5 w-5 mr-2"></i>
+                        <span>用心種植，真誠分享</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Product -->
+    <section id="products" class="py-20 bg-gradient-to-br from-purple-50 to-green-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    明星產品
+                </h2>
+                <p class="text-xl text-gray-600">
+                    雲霧深處的珍貴饋贈
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 order-2 lg:order-1">
+                    <h3 class="text-2xl md:text-3xl font-bold text-purple-900">
+                        雲霧·醇釀嘉寶果酒
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-lucide="grape" class="h-6 w-6 text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">獨特風味</h4>
+                                <p class="text-gray-600">
+                                    融合山竹、釋迦、番石榴等多種熱帶水果香氣，口感甜美順滑，餘味悠長
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i data-lucide="leaf" class="h-6 w-6 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">自然發酵</h4>
+                                <p class="text-gray-600">
+                                    採用天然酵母菌群進行發酵，經過長時間陳釀，風味層次豐富醇厚
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i data-lucide="award" class="h-6 w-6 text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">珍貴原料</h4>
+                                <p class="text-gray-600">
+                                    選用自然農法種植的完全成熟嘉寶果，富含花青素等珍貴營養成分
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-medium smooth-transition">
+                        了解更多
+                        <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                    </a>
+                </div>
+
+                <div class="relative order-1 lg:order-2">
+                    <div class="bg-gradient-to-br from-purple-100 to-green-100 rounded-2xl p-8">
+                        <div class="w-full h-80 bg-gradient-to-br from-purple-200 to-green-200 rounded-xl shadow-lg flex items-center justify-center img-fallback">
+                            <i data-lucide="wine" class="h-20 w-20 text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jaboticaba Introduction -->
+    <section id="knowledge" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-purple-100 to-green-100 rounded-2xl p-8">
+                        <div class="w-full h-80 bg-gradient-to-br from-purple-200 to-green-200 rounded-xl shadow-lg flex items-center justify-center img-fallback">
+                            <i data-lucide="cherry" class="h-20 w-20 text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900">
+                        神奇的"樹葡萄"
+                    </h3>
+                    
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        嘉寶果，又稱樹葡萄，是一種極其珍貴的熱帶水果。
+                        最神奇的是它的果實直接從樹幹和主枝上長出，
+                        成熟時呈現迷人的深紫色，猶如一顆顆黑寶石掛滿枝幹。
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-purple-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-purple-900 mb-2">花青素豐富</h4>
+                            <p class="text-sm text-purple-700">強效抗氧化，延緩衰老</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-green-900 mb-2">營養密度高</h4>
+                            <p class="text-sm text-green-700">維生素C、礦物質豐富</p>
+                        </div>
+                    </div>
+
+                    <a href="#about" class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium smooth-transition">
+                        探索知識
+                        <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-green-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    莊園介紹
+                </h2>
+                <p class="text-xl text-gray-600">
+                    自然農法，匠心釀造
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 order-2 lg:order-1">
+                    <h3 class="text-2xl md:text-3xl font-bold text-green-900">
+                        生態莊園，自然之道
+                    </h3>
+                    
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        雲霧嘉寶果莊園位於廣州從化，佔地200畝，其中100多畝專門種植嘉寶果。
+                        我們堅持自然農法，不使用化學農藥和化肥，讓每一顆果實都能在最自然的環境中生長。
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-4 shadow-md">
+                            <h4 class="font-semibold text-green-900 mb-2">200畝莊園</h4>
+                            <p class="text-sm text-gray-600">廣闊的自然生態環境</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-md">
+                            <h4 class="font-semibold text-green-900 mb-2">100畝果園</h4>
+                            <p class="text-sm text-gray-600">專業嘉寶果種植區域</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-md">
+                            <h4 class="font-semibold text-green-900 mb-2">自然農法</h4>
+                            <p class="text-sm text-gray-600">無農藥、無化肥種植</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-md">
+                            <h4 class="font-semibold text-green-900 mb-2">精釀工藝</h4>
+                            <p class="text-sm text-gray-600">傳統發酵，現代工藝</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative order-1 lg:order-2">
+                    <div class="bg-gradient-to-br from-green-100 to-purple-100 rounded-2xl p-8">
+                        <div class="w-full h-80 bg-gradient-to-br from-green-200 to-purple-200 rounded-xl shadow-lg flex items-center justify-center img-fallback">
+                            <i data-lucide="tree-pine" class="h-20 w-20 text-green-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Story -->
+    <section id="owner-story" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    莊主故事
+                </h2>
+                <p class="text-xl text-gray-600">
+                    從廣播主持人到莊園主
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-purple-100 to-green-100 rounded-2xl p-8">
+                        <div class="w-full h-80 bg-gradient-to-br from-purple-200 to-green-200 rounded-xl shadow-lg flex items-center justify-center img-fallback">
+                            <i data-lucide="mic" class="h-20 w-20 text-purple-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-2xl md:text-3xl font-bold text-purple-900">
+                        聲音的藝術到釀酒的匠心
+                    </h3>
+                    
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        作為一名廣播主持人，我曾經用聲音傳遞溫暖與感動。如今，我用同樣的真誠與熱情，
+                        在這片土地上培育生命，釀造美酒，與每一位朋友分享自然的純粹與美好。
+                    </p>
+                    
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        從話筒前到果園裡，從傳播聲音到釀造美酒，這不是簡單的職業轉換，
+                        而是對生活更深層次的理解和追求。每一瓶酒，都承載著我們對自然的敬畏和對品質的堅持。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-purple-50 to-green-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    聯繫我們
+                </h2>
+                <p class="text-xl text-gray-600">
+                    歡迎來到雲霧嘉寶果莊園
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-900">
+                        聯繫信息
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-lucide="map-pin" class="h-6 w-6 text-purple-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">地址</h4>
+                                <p class="text-gray-600">廣州市從化區雲霧山</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i data-lucide="phone" class="h-6 w-6 text-purple-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">電話</h4>
+                                <p class="text-gray-600">+86 138-0000-0000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i data-lucide="mail" class="h-6 w-6 text-purple-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">郵箱</h4>
+                                <p class="text-gray-600">info@yunwuvilla.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i data-lucide="clock" class="h-6 w-6 text-purple-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">營業時間</h4>
+                                <p class="text-gray-600">週一至週日 9:00-18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                        留言諮詢
+                    </h3>
+                    
+                    <form class="space-y-4" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                            <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">電話</label>
+                            <input type="tel" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">郵箱</label>
+                            <input type="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">留言</label>
+                            <textarea rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-md font-medium smooth-transition">
+                            發送留言
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <span class="gradient-text">雲霧嘉寶果莊園</span>
+                    </h3>
+                    <p class="text-gray-400">
+                        專注自然農法種植，匠心釀造美酒，與您分享大自然最純粹的饋贈。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">快速鏈接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white smooth-transition">首頁</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white smooth-transition">莊園介紹</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white smooth-transition">產品展示</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white smooth-transition">聯繫我們</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">關注我們</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="facebook" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="instagram" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white smooth-transition">
+                            <i data-lucide="phone" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 雲霧嘉寶果莊園. 版權所有.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化 Lucide 图标
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // 移动端导航菜单切换
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.toggle('open');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        }
+
+        // 移动端导航链接点击关闭菜单
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileNav) {
+                    mobileNav.classList.remove('open');
+                    if (menuIcon) menuIcon.classList.remove('hidden');
+                    if (closeIcon) closeIcon.classList.add('hidden');
+                }
+            });
+        });
+
+        // 导航高亮
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        function highlightNavigation() {
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-purple-600', 'bg-purple-50');
+                        link.classList.add('text-gray-700');
+                        
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.remove('text-gray-700');
+                            link.classList.add('text-purple-600', 'bg-purple-50');
+                        }
+                    });
+                }
+            });
+        }
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 表单提交处理
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('感謝您的留言！我們會盡快與您聯繫。');
+            event.target.reset();
+        }
+
+        // 滚动事件监听
+        window.addEventListener('scroll', highlightNavigation);
+        window.addEventListener('load', () => {
+            highlightNavigation();
+            // 重新初始化图标以防加载失败
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // 添加加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
