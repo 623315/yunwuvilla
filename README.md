@@ -48,3 +48,11 @@ export default tseslint.config({
   },
 })
 ```
+
+# 雲霧嘉寶果莊園
+
+專業嘉寶果種植與釀酒，體驗廣東當地農業文化與美酒。
+
+## 在線訪問
+- GitHub Pages: https://623315.github.io/yunwuvilla/
+- 自定義域名: https://yunwuvilla.com
