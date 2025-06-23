@@ -14,8 +14,8 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "",
     sourcemap: false,
-    target: 'es5',
-    minify: 'terser',
+    target: 'es2018',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         format: 'iife',
