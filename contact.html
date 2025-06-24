@@ -12,6 +12,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <style>
         .gradient-text {
@@ -247,12 +249,12 @@
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
                                 >
                                     <option value="">請選擇...</option>
-                                    <option value="fresh-fruit">新鮮嘉寶果</option>
-                                    <option value="wine">嘉寶果酒</option>
-                                    <option value="jam">手工果醬</option>
-                                    <option value="farm-visit">莊園參觀體驗</option>
-                                    <option value="business">商務合作</option>
-                                    <option value="others">其他</option>
+                                    <option value="新鮮嘉寶果">新鮮嘉寶果</option>
+                                    <option value="嘉寶果酒">嘉寶果酒</option>
+                                    <option value="手工果醬">手工果醬</option>
+                                    <option value="莊園參觀體驗">莊園參觀體驗</option>
+                                    <option value="商務合作">商務合作</option>
+                                    <option value="其他">其他</option>
                                 </select>
                             </div>
 
@@ -281,12 +283,15 @@
                                 ></textarea>
                             </div>
 
+
+
                             <button
                                 type="submit"
                                 class="w-full bg-gradient-to-r from-purple-600 to-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-green-700 transition-all duration-300 flex items-center justify-center"
+                                id="submit-btn"
                             >
                                 <i data-lucide="send" class="h-5 w-5 mr-2"></i>
-                                發送留言
+                                <span id="submit-text">發送留言</span>
                             </button>
                         </form>
                     </div>
@@ -537,6 +542,9 @@
                 lucide.createIcons();
             }
 
+            // 初始化 EmailJS
+            emailjs.init("u6v1WbFuAxYfodXwS");
+
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileNav = document.getElementById('mobile-nav');
             const menuIcon = document.getElementById('menu-icon');
@@ -550,28 +558,106 @@
                 });
             }
 
+            // 显示成功消息函数
+            function showSuccessMessage() {
+                const successDiv = document.createElement('div');
+                successDiv.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+                successDiv.innerHTML = `
+                    <div class="flex items-center">
+                        <i data-lucide="check-circle" class="h-5 w-5 mr-2"></i>
+                        <span>感謝您的留言！我們會盡快與您聯繫。</span>
+                    </div>
+                `;
+                document.body.appendChild(successDiv);
+                
+                // 重新创建图标
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+                
+                // 3秒后自动消失
+                setTimeout(() => {
+                    successDiv.remove();
+                }, 3000);
+            }
+
+            // 显示错误消息函数
+            function showErrorMessage() {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+                errorDiv.innerHTML = `
+                    <div class="flex items-center">
+                        <i data-lucide="alert-circle" class="h-5 w-5 mr-2"></i>
+                        <span>發送失敗，請稍後重試或直接聯繫我們。</span>
+                    </div>
+                `;
+                document.body.appendChild(errorDiv);
+                
+                // 重新创建图标
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+                
+                // 5秒后自动消失
+                setTimeout(() => {
+                    errorDiv.remove();
+                }, 5000);
+            }
+
             // 处理表单提交
             const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
+            const submitBtn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            
+            if (contactForm && submitBtn && submitText) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
+                    // 更改按钮状态为提交中
+                    submitBtn.disabled = true;
+                    submitText.textContent = '發送中...';
+                    submitBtn.classList.add('opacity-75');
+                    
                     // 获取表单数据
                     const formData = new FormData(contactForm);
-                    const data = Object.fromEntries(formData);
-                    
-                    console.log('表單數據:', data);
-                    
-                    // 显示成功消息
-                    alert('感謝您的留言！我們會盡快與您聯繫。');
-                    
-                    // 重置表单
-                    contactForm.reset();
+                    const templateParams = {
+                        from_name: formData.get('name'),
+                        from_email: formData.get('email'),
+                        phone: formData.get('phone'),
+                        interest: formData.get('interest'),
+                        visit_date: formData.get('visitDate'),
+                        message: formData.get('message'),
+                        to_email: '623315@qq.com'
+                    };
+
+                    // 发送邮件（需要先配置 EmailJS）
+                    emailjs.send('service_r4sn7qx', 'template_q7vcneb', templateParams)
+                        .then(function() {
+                            // 成功发送
+                            showSuccessMessage();
+                            contactForm.reset();
+                            
+                            // 恢复按钮状态
+                            submitBtn.disabled = false;
+                            submitText.textContent = '發送留言';
+                            submitBtn.classList.remove('opacity-75');
+                            
+                            // 3秒后跳转到成功页面
+                            setTimeout(() => {
+                                window.location.href = 'success.html';
+                            }, 2000);
+                        })
+                        .catch(function(error) {
+                            console.error('发送失败:', error);
+                            showErrorMessage();
+                            
+                            // 恢复按钮状态
+                            submitBtn.disabled = false;
+                            submitText.textContent = '發送留言';
+                            submitBtn.classList.remove('opacity-75');
+                        });
                 });
             }
-
-            // 地图模态框功能
-
         });
     </script>
 </body>
